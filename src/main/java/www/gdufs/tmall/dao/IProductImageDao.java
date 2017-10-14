@@ -21,11 +21,11 @@ public interface IProductImageDao {
     ProductImage get(int id);
 
     //5. 分页查询
-    List<ProductImage> list(int start, int count);
+    List<ProductImage> list(int pid, int start, int count);
 
     //6. 查询所有
-    List<ProductImage> list();
+    List<ProductImage> list(int pid);
 
     //7. 获取总数
-    int getTotal();
+    int getTotal(int pid);
 }
