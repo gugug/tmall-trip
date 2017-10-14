@@ -3,7 +3,7 @@ package www.gdufs.tmall.dao;
 /**
  * Created by gu on 2017/10/14.
  */
-public interface OrderDAO {
+public interface IOrderDao {
     public static final String waitPay = "waitPay";
     public static final String waitDelivery = "waitDelivery";
     public static final String waitConfirm = "waitConfirm";
