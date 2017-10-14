@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by gu on 2017/10/14.
  */
-public class PropertyDAO implements IPropertyDao {
+public class PropertyDao implements IPropertyDao {
 
     @Override
     public int getTotal(int cid) {
@@ -86,7 +86,7 @@ public class PropertyDAO implements IPropertyDao {
                 int id = rs.getInt("id");
                 bean = new Property();
                 bean.setName(name);
-                Category category = new CategoryDAO().get(cid);
+                Category category = new CategoryDao().get(cid);
                 bean.setCategory(category);
                 bean.setId(id);
             }
@@ -106,7 +106,7 @@ public class PropertyDAO implements IPropertyDao {
                 String name = rs.getString("name");
                 int cid = rs.getInt("cid");
                 bean.setName(name);
-                Category category = new CategoryDAO().get(cid);
+                Category category = new CategoryDao().get(cid);
                 bean.setCategory(category);
                 bean.setId(id);
             }
@@ -136,7 +136,7 @@ public class PropertyDAO implements IPropertyDao {
                 int id = rs.getInt(1);
                 String name = rs.getString("name");
                 bean.setName(name);
-                Category category = new CategoryDAO().get(cid);
+                Category category = new CategoryDao().get(cid);
                 bean.setCategory(category);
                 bean.setId(id);
                 beans.add(bean);

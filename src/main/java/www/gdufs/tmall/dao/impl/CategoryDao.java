@@ -33,7 +33,7 @@ import java.util.List;
  * specification header. This construction ensures prompt release, avoiding resource
  * exhaustion exceptions and errors that may otherwise occur.
  */
-public class CategoryDAO implements ICategoryDao {
+public class CategoryDao implements ICategoryDao {
 
     @Override
     public int getTotal() {
