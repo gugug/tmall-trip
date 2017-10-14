@@ -83,4 +83,14 @@ public class ProductImageDao implements IProductImageDao {
         }
         return total;
     }
+
+    @Override
+    public List<ProductImage> list(Product p, String type) {
+        return null;
+    }
+
+    @Override
+    public List<ProductImage> list(Product p, int start, int count) {
+        return null;
+    }
 }
