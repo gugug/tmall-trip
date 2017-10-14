@@ -1,6 +1,6 @@
 package www.gdufs.tmall.bean;
 
-import www.gdufs.tmall.dao.OrderDAO;
+import www.gdufs.tmall.dao.IOrderDao;
 
 import java.util.Date;
 import java.util.List;
@@ -160,22 +160,22 @@ public class Order {
     public String getStatusDesc() {
         String desc = "未知";
         switch (status) {
-            case OrderDAO.waitPay:
+            case IOrderDao.waitPay:
                 desc = "待付款";
                 break;
-            case OrderDAO.waitDelivery:
+            case IOrderDao.waitDelivery:
                 desc = "待发货";
                 break;
-            case OrderDAO.waitConfirm:
+            case IOrderDao.waitConfirm:
                 desc = "待收货";
                 break;
-            case OrderDAO.waitReview:
+            case IOrderDao.waitReview:
                 desc = "等评价";
                 break;
-            case OrderDAO.finish:
+            case IOrderDao.finish:
                 desc = "完成";
                 break;
-            case OrderDAO.delete:
+            case IOrderDao.delete:
                 desc = "刪除";
                 break;
             default:
