@@ -1,5 +1,6 @@
 package www.gdufs.tmall.dao;
 
+import www.gdufs.tmall.bean.Product;
 import www.gdufs.tmall.bean.ProductImage;
 
 import java.util.List;
@@ -8,6 +9,9 @@ import java.util.List;
  * Created by gu on 2017/10/14.
  */
 public interface IProductImageDao {
+    String TYPR_SINGLE = "type_single";
+    String TYPE_DETAIL = "type_detail";
+
     //1. 增加
     void add(ProductImage bean);
 
@@ -28,4 +32,8 @@ public interface IProductImageDao {
 
     //7. 获取总数
     int getTotal(int pid);
+
+    //查询指定产品下某种类型的productImage
+    List<ProductImage> list(Product p, String type);
+    List<ProductImage> list(Product p, int start, int count);
 }
